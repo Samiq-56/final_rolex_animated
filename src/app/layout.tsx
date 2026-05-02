@@ -1,25 +1,50 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { 
+  Playfair_Display, 
+  Cormorant_Garamond, 
+  DM_Sans, 
+  Space_Mono 
+} from 'next/font/google';
 import './globals.css';
 
-const jakarta = Plus_Jakarta_Sans({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-jakarta',
+  variable: '--font-playfair',
+  display: 'swap',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+});
+
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-space-mono',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
   title: 'ROLEX | The Submariner - A Crown for Every Achievement',
   description:
-    'Explore the timeless excellence of the Rolex Submariner. A journey through heritage, precision, and the ultimate symbol of innovation.',
+    'Experience the ultimate symbol of excellence, performance, prestige and innovation. The Rolex Submariner.',
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={jakarta.variable}>
-      <body className={`${jakarta.className} antialiased bg-[#0d0d0d]`}>
+    <html lang="en" className={`${playfair.variable} ${cormorant.variable} ${dmSans.variable} ${spaceMono.variable}`}>
+      <body className="antialiased bg-[#0A0A0A] text-[#FAFAFA] selection:bg-gold selection:text-black">
         {children}
       </body>
     </html>
