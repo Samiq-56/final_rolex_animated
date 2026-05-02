@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const subjects = [
   {
@@ -67,12 +68,12 @@ export default function Courses() {
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               className="group block bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl transition-shadow"
             >
-              <div className="h-48 overflow-hidden bg-slate-200">
-                <img 
+              <div className="relative h-48 overflow-hidden bg-slate-200">
+                <Image 
                   src={subject.image} 
                   alt={subject.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-8">

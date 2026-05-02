@@ -32,7 +32,7 @@ export default function Navbar() {
             className="px-4 py-1.5 text-slate-800 font-bold text-sm md:text-base whitespace-nowrap"
             style={{ letterSpacing: '-0.02em' }}
           >
-            Samiq Bukhari<span className="text-blue-500">.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400 font-extrabold">Samiq Bukhari</span><span className="text-blue-500">.</span>
           </a>
 
           {/* Vertical divider — hidden on small mobile */}

@@ -41,7 +41,7 @@ export default function AboutMeSplit() {
         {/* Left Side: Image & Stats (40%) */}
         <div className="lg:w-[40%] flex flex-col justify-center">
           <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl mb-12">
-             <img src="/pu.jpg" alt="PUCIT Lahore" className="w-full h-full object-cover" />
+             <Image src="/pu.jpg" alt="PUCIT Lahore" fill className="object-cover" />
           </div>
           <div className="grid grid-cols-2 gap-x-8">
             <Counter from={0} to={542} suffix="" label="QS World Rank" />
@@ -56,7 +56,7 @@ export default function AboutMeSplit() {
           </h3>
           <div className="space-y-6 text-slate-600 text-lg md:text-xl leading-relaxed">
             <p>
-              Hello! I&apos;m <span className="text-blue-500 font-semibold">Syed Samiq Abbas Bukhari</span>, a passionate student pursuing a degree in Data Sciences at <span className="text-blue-500 font-semibold">Punjab University (PUCIT) Lahore</span>, Pakistan.
+              Hello! I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400 font-extrabold">Syed Samiq Abbas Bukhari</span>, a passionate student pursuing a degree in Data Sciences at <span className="text-blue-500 font-semibold">Punjab University (PUCIT) Lahore</span>, Pakistan.
             </p>
             <p>
               I&apos;m dedicated to learning and applying cutting-edge technologies to solve real-world problems. My interests span Artificial Intelligence, Web Development, and Data Science.

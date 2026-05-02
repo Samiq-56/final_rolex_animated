@@ -16,7 +16,7 @@ export default function Footer() {
             Get In <span className="text-blue-500">Touch</span>
           </h3>
           <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-8">
-            Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
+            Have a project in mind or want to discuss potential opportunities? I&apos;d love to hear from you!
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-          <span>© {new Date().getFullYear()} Syed Samiq Abbas Bukhari. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400 font-extrabold">Syed Samiq Abbas Bukhari</span>. All rights reserved.</span>
           <span>Faisalabad, Pakistan</span>
         </div>
       </div>

@@ -9,9 +9,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Chetan Pujari | AI Educator & Creative Developer',
+  title: 'Samiq Bukhari | Data Sciences & Web Developer',
   description:
-    'I Make Tech, AI & Design Simple — So You Can Do More. 400K+ students across 190+ countries on 21+ platforms.',
+    'I am Syed Samiq Abbas Bukhari, a passionate Data Sciences student at PUCIT Lahore, creating modern and AI-driven web experiences.',
 };
 
 export default function RootLayout({
