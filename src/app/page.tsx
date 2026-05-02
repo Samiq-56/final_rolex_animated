@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 
-const FRAME_COUNT = 265;
+const FRAME_COUNT = 266;
 const FRAME_BASE_URL = '/sequence/frame_';
 const FRAME_SUFFIX = '_delay-0.041s.webp';
 
@@ -43,7 +43,7 @@ export default function ScrollyVideoPage() {
     async function preload() {
       for (let i = 0; i < FRAME_COUNT; i++) {
         if (cancelled) break;
-        const padded = (i + 1).toString().padStart(3, '0');
+        const padded = i.toString().padStart(3, '0');
         const url = `${FRAME_BASE_URL}${padded}${FRAME_SUFFIX}`;
         try {
           const response = await fetch(url);
