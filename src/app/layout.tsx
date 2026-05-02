@@ -9,9 +9,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Samiq Bukhari | Data Sciences & Web Developer',
+  title: 'ROLEX | The Submariner - A Crown for Every Achievement',
   description:
-    'I am Syed Samiq Abbas Bukhari, a passionate Data Sciences student at PUCIT Lahore, creating modern and AI-driven web experiences.',
+    'Explore the timeless excellence of the Rolex Submariner. A journey through heritage, precision, and the ultimate symbol of innovation.',
 };
 
 export default function RootLayout({

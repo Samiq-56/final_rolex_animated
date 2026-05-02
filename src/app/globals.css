@@ -1,96 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --gold: #C9A84C;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @layer base {
-  html {
-    background-color: #f8fafc;
-    scroll-behavior: smooth;
-    scroll-padding-top: 96px;
-  }
-  body {
-    background-color: #f8fafc;
-    color: #1e293b;
+  .font-serif {
+    font-family: 'Playfair Display', serif;
   }
 }
 
-@layer components {
-  /* Floating frosted-glass pill — used by Navbar */
-  .glass-pill {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(28px) saturate(180%);
-    -webkit-backdrop-filter: blur(28px) saturate(180%);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow:
-      0 16px 48px -12px rgba(0, 0, 0, 0.05),
-      0 4px 16px -4px rgba(0, 0, 0, 0.02);
-  }
-
-  /* Frosted-glass surface — used by Service & Course cards */
-  .glass-card {
-    background: rgba(255, 255, 255, 1);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow:
-      0 8px 32px -8px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .glass-card:hover {
-    background: rgba(255, 255, 255, 1);
-    border-color: rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-    box-shadow:
-      0 16px 48px -12px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Liquid-glass watermark text — gradient fill + idle subtle, hover chromatic refraction */
-  .watermark-glass {
-    background: linear-gradient(
-      135deg,
-      rgba(15, 23, 42, 0.1) 0%,
-      rgba(15, 23, 42, 0.02) 50%,
-      rgba(15, 23, 42, 0.1) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    filter: drop-shadow(0 0 80px rgba(0, 0, 0, 0.02));
-    transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-                letter-spacing 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .watermark-glass:hover {
-    /* Subtle chromatic aberration — red shifts one way, blue the other, like light refracting through glass */
-    filter:
-      drop-shadow(-2px 0 0 rgba(59, 130, 246, 0.2))
-      drop-shadow(2px 0 0 rgba(6, 182, 212, 0.2))
-      drop-shadow(0 0 60px rgba(0, 0, 0, 0.05));
-    letter-spacing: -0.045em;
-  }
-
-  /* Solid-white CTA pill — used in Navbar and Footer for consistency */
-  .pill-cta {
-    background: #1e293b;
-    color: #ffffff;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.2),
-      0 4px 16px -4px rgba(0, 0, 0, 0.1);
-  }
-  .pill-cta:hover {
-    background: #3b82f6;
-    color: #ffffff;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.3),
-      0 8px 24px -4px rgba(59, 130, 246, 0.4);
+@layer utilities {
+  .text-gold {
+    color: #C9A84C;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-  }
+/* Custom horizontal line animation */
+.line-draw {
+  width: 0;
+  animation: draw 1s forwards ease-out;
+}
+
+@keyframes draw {
+  to { width: 100%; }
+}
+
+/* Smooth fade for text */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
